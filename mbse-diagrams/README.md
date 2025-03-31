@@ -1,62 +1,77 @@
 
-# MBSE Day 1 – Block Definition Diagram (BDD)
+# MBSE Modeling Portfolio – Safety Monitoring System
+
+This repository showcases a model-based engineering example using SysML-inspired diagrams. The system modeled is a **Safety Monitoring System** used to detect, analyze, report, and communicate safety-critical incidents.
+
+---
+
+## ✅ MBSE Day 1 – Block Definition Diagram (BDD)
 
 ![Safety Monitoring System BDD](safety_monitoring_system_bdd.png)
 
----
+### 🧭 Overview
 
-## 🧭 Overview
+This Block Definition Diagram (BDD) models the system structure, showing how major components are composed and related.
 
-This diagram models a **Safety Monitoring System** using a simplified **SysML-style Block Definition Diagram (BDD)**. It reflects a typical safety-critical system with clear component structure, behaviors, and inter-block relationships.
+### 📦 Modeled Blocks
 
----
+#### `Safety Monitoring System`
+- Composes all major subsystems.
 
-## 📦 Modeled Blocks
+#### `Safety Analyzer`
+- Detects anomalies and generates incident data.
 
-### `Safety Monitoring System`
-- Top-level system composed of 3 internal components.
-- Represents the system responsible for handling safety events and communication.
+#### `Incident Reporter`
+- Logs and prepares incident data for transmission.
 
-### `Safety Analyzer`
-- Monitors safety-related data.
-- Reports potential hazards or anomalies.
+#### `Communication Interface`
+- Sends reports externally.
 
-### `Incident Reporter`
-- Gathers, logs, and prepares safety incident data.
-- Interfaces with communication systems for delivery.
+### 🔗 Relationships
 
-### `Communication Interface`
-- Transmits incident reports to external systems or users.
-
----
-
-## 🔗 Key Relationships
-
-- `Safety Monitoring System` **composes** all 3 components.
+- `Safety Monitoring System` **composes** all components.
 - `Safety Analyzer` **monitors** `Incident Reporter`.
 - `Incident Reporter` **uses** `Communication Interface`.
 
 ---
 
-## 🔧 Technical Notes
+## 🔁 MBSE Day 2 – Internal Block Diagram (IBD)
 
-- Each block shows one attribute and one method for simplicity.
-- Color coding improves visual comprehension and readability.
-- Modeled using [draw.io](https://draw.io), mimicking SysML conventions.
+![Safety Monitoring System IBD](safety_monitoring_system_ibd.png)
+
+### 🧭 Overview
+
+This Internal Block Diagram (IBD) shows how components interact via ports and data flow within the `Safety Monitoring System`.
+
+### 🔧 Ports & Connectors
+
+Each block exposes ports that represent:
+
+- `incidentOut : string`
+- `reportStatus : boolean`
+- `transmitData : string`
+
+### 🔁 Data Flow
+
+- `Safety Analyzer` ➝ `Incident Reporter`: `incidentStatus : string`
+- `Incident Reporter` ➝ `Communication Interface`: `reportData : string`
 
 ---
 
-## 💡 Why This Matters
+## 📘 MBSE Concepts Demonstrated
 
-This BDD demonstrates model-based thinking for safety-critical systems — an approach that combines:
-- **System Architecture**
-- **Safety Engineering**
-- **Software and Communications Integration**
-
-🔗 Built by: Sean Mayers  
-🎯 Career Transition: From NASA/DoD system safety → MBSE + System Architecture
+- Block Definition Diagram (BDD)
+- Internal Block Diagram (IBD)
+- System decomposition & composition
+- Ports and connectors
+- Value types and flow properties
 
 ---
 
-> ✅ This is part of Sean's ongoing MBSE portfolio to prepare for $145K+ roles in aerospace, defense, and intelligent systems.
+## 🎯 About
 
+Created by **Sean Mayers**  
+🧠 Background: NASA/DoD System & Software Safety  
+🎯 Goal: Transition into high-impact MBSE/System Architect roles
+
+> ✅ This is part of Sean’s ongoing MBSE portfolio to prepare for roles in aerospace, defense, and intelligent systems.
