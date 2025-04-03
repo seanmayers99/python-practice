@@ -58,5 +58,5 @@ This BDD demonstrates model-based thinking for safety-critical systems — an ap
 
 ---
 
-> ✅ This is part of Sean's ongoing MBSE portfolio to prepare for $145K+ roles in aerospace, defense, and intelligent systems.
+> ✅ This is part of Sean’s ongoing MBSE portfolio to prepare for roles in aerospace, defense, and intelligent systems.
 
