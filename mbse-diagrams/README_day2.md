@@ -1,51 +1,37 @@
 
-## MBSE Day 2 – Internal Block Diagram (IBD)
+# MBSE Day 2: Internal Block Diagram – Safety Monitoring System
 
-![Safety Monitoring System IBD](safety_monitoring_system_ibd.png)
-
----
-
-### 🧭 Overview
-
-This Internal Block Diagram (IBD) shows the **internal structure** of the `Safety Monitoring System`, expanding on the Block Definition Diagram (BDD) from MBSE Day 1.
-
-The IBD focuses on **interfaces and internal connections** between the components — modeling how information (incident data, status, and transmission commands) flows within the system.
+This internal block diagram (IBD) represents the internal structure and interactions of the components in the Safety Monitoring System I modeled. It is based on the BDD created in Day 1, and focuses on the flow of data and interactions between internal parts of the system.
 
 ---
 
-### 🔧 Modeled Components & Ports
+## 🔍 Purpose
 
-Each internal block exposes **ports** that represent key data flow:
-
-#### `Safety Analyzer`
-- `incidentOut : string`
-- `reportStatus : boolean`
-- `transmitData : string`
-
-#### `Incident Reporter`
-- Receives `incidentStatus:string` from analyzer
-- Outputs incident data to `Communication Interface`
-
-#### `Communication Interface`
-- Receives structured report data
-- Sends it externally
+This diagram helps me visualize how different parts of the Safety Monitoring System work together at runtime, particularly how they exchange data. It builds on the block definition structure and lets me map actual usage and interfaces.
 
 ---
 
-### 🔁 Data Flow
+## 🧠 What This Diagram Shows
 
-- `Safety Analyzer` ➝ `Incident Reporter`: `incidentStatus : string`
-- `Incident Reporter` ➝ `Communication Interface`: `reportData : string`
-
----
-
-### 📘 MBSE Concepts Demonstrated
-- Internal Block Diagram (IBD)
-- Interfaces and connectors
-- Value types on ports
-- Composition and behavior flow
-- System decomposition
+- **Block interactions** between the Safety Analyzer, Incident Reporter, and Communication Interface
+- **Ports and data flows** (like `incidentOut`, `transmitData`, `reportStatus`)
+- **Directed connections** showing how information is passed between components
 
 ---
 
-> ✅ This is part of Sean Mayers' MBSE modeling portfolio designed for $145K+ roles in system architecture, aerospace, and safety-critical systems.
+## 🧩 Diagram: `safety_monitoring_system_ibd.png`
+
+📎 [Click to view the internal block diagram](./safety_monitoring_system_ibd.png)
+
+---
+
+## 💼 Why This Matters
+
+This diagram is part of my MBSE (Model-Based Systems Engineering) practice portfolio. It shows how I apply system-level thinking to software-relevant domains by understanding internal communication patterns and structuring components accordingly.
+
+I created this as part of my prep for future roles that intersect system modeling, safety engineering, and software integration — especially in aerospace, defense, and intelligent systems.
+
+---
+
+**Created by Sean Mayers**  
+System & Software Safety Engineer | MBSE + Python | Portfolio Development
